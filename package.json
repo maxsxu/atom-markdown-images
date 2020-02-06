@@ -1,0 +1,70 @@
+{
+  "name": "markdown-images",
+  "main": "./lib/main",
+  "version": "0.1.0",
+  "description": "Paste images in markdown with git repository",
+  "keywords": [
+    "markdown",
+    "image",
+    "copy",
+    "paste",
+    "git",
+    "github",
+    "gitlab"
+  ],
+  "activationCommands": {
+    "atom-workspace": "markdown-images:toggle"
+  },
+  "configSchema": {
+    "git-repository": {
+      "type": "string",
+      "title": "Path of Git Repository for Images",
+      "description": "GitHub or GitLab repository by `git clone`",
+      "default": "",
+      "order": 1
+    },
+    "git-username": {
+      "type": "string",
+      "title": "Username",
+      "description": "username of remote repository",
+      "default": "",
+      "order": 2
+    },
+    "git-password": {
+      "type": "string",
+      "title": "Password",
+      "description": "password of remote repository",
+      "default": "",
+      "order": 3
+    },
+    "git-committer-name": {
+      "type": "string",
+      "title": "Committer Name",
+      "description": "`git config --global user.name`",
+      "default": "",
+      "order": 4
+    },
+    "git-committer-email": {
+      "type": "string",
+      "title": "Committer Email",
+      "description": "`git config --global user.email`",
+      "default": "",
+      "order": 5
+    },
+    "git-commit-message": {
+      "type": "string",
+      "title": "Commit Message",
+      "description": "message used in `git commit -m`",
+      "default": "Auto Commit",
+      "order": 6
+    }
+  },
+  "repository": "https://github.com/jsonbruce/atom-markdown-images",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "nodegit": "^0.26.4"
+  }
+}
